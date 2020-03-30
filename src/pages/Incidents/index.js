@@ -23,7 +23,7 @@ export default function Incidents() {
         }
 
         if( total > 0 && incidents.length === total ){
-            return;
+            //return;
         }
 
         setLoading(true);
@@ -67,7 +67,7 @@ export default function Incidents() {
                 renderItem={({ item: incident }) => (
                     <View style={styles.incident}>
                         <Text style={styles.incidentProperty}>ONG:</Text>
-                        <Text style={styles.incidentValue}>{incident.name}</Text>
+                        <Text style={styles.incidentValue}>{incident.name} de {incident.city}-{incident.uf}</Text>
                         <Text style={styles.incidentProperty}>CASO:</Text>
                         <Text style={styles.incidentValue}>{incident.title}</Text>
                         <Text style={styles.incidentProperty}>VALOR:</Text>
